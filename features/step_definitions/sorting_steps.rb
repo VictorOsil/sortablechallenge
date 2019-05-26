@@ -9,7 +9,6 @@ end
 
 Then("the items are shown in ascending order") do
     @sorting_page.findItems
-    puts $arrayItems
-    puts $ascendingInitial
+    puts "After sorting: #{$arrayItems}"
     expect($arrayItems).to eq($ascendingInitial)
 end
