@@ -1,4 +1,4 @@
-default: -p html --format pretty -p headless-chrome
+default: -p html --format pretty -p chrome
 
 html: --format html --out=log/reports/features.html
 chrome: BROWSER=chrome

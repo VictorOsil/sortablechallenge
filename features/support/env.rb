@@ -18,18 +18,14 @@ Capybara.configure do |config|
                 'plugins.plugins_disabled': ["Chrome PDF Viewer"],
             }
             options = Selenium::WebDriver::Chrome::Options.new(args: arguments, prefs: preferences)
-            # noinspection RubyArgCount
             Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
-            # config.default_driver = :selenium
-            # config.app_host = 'http://localhost:3000'
         end
+        Capybara.default_driver = :selenium
     else
         config.default_driver = :selenium
     end
     # config.app_host = 'http://localhost:3000'
 end
 
-Capybara.default_driver = :selenium
 Capybara.run_server = false
-# Capybara.default_selector = :css
 Capybara.default_max_wait_time = 30

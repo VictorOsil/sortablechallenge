@@ -1,4 +1,4 @@
-Given("I am on the sorting") do
+Given("I am on the sorting page") do
     @sorting_page.url
     expect(@sorting_page).to have_selector("div[id='app']")
 end
