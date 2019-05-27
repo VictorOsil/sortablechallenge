@@ -1,16 +1,15 @@
-# Challenge Mindera
+# Challenge - Mindera
 
-# required
-
+**Required**
 Ruby 2.4 or higher
 
-Gems:
+**Gems:**
 - cucumber
 - capybara
 - rspec
 - selenium-webdriver
 
-Drivers:
+**Drivers:**
 - geckodriver
 - chromedriver
 
@@ -22,10 +21,10 @@ Drivers:
     - http://chromedriver.chromium.org/downloads
     - https://github.com/mozilla/geckodriver/releases/tag/v0.24.0
 
-#Clone project
+**Clone project**
 git clone https://github.com/VictorOsil/challengeMandera.git
 
-#Install gems
+**Install gems**
 Run command 'bundle install'
 
     OBS: if the command above does not return success, do as follow and try again:
@@ -42,12 +41,19 @@ Run command 'bundle install'
 
     gem install bundler"
 
-#Run tests
+**Run tests**
 *After running the application as described on "https://bitbucket.org/mindera/qa-sortable-challenge/src/master/"
 
 Run command 'bundle exec cucumber'
     Obs: Chrome is set as default in cucumber.yaml . It can be changed to firefox or chrome-headless in the same file or simply execute the command 'bundle exec cucumber -p firefox'
 
-#Results
+**Results**
 After running the test the report is generated in the path 'log/reports' (work best on Chrome)
 The screenshot can be find in 'log/shots'
+
+**Docker**
+Commands:
+
+- docker build -t sortablechallenge .
+- docker run -v {project_path}:/cucumber sortablechallenge cucumber features/sorting.feature
+    Ex: docker run -v /Users/Victor/Documents/Victor/sortablechallenge:/cucumber sortablechallenge cucumber features/sorting.feature
