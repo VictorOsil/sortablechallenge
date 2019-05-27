@@ -42,9 +42,10 @@ Run command 'bundle install'
     gem install bundler"
 
 **Run tests**
-*After running the application as described on "https://bitbucket.org/mindera/qa-sortable-challenge/src/master/"
+OBS: After running the application as described on "https://bitbucket.org/mindera/qa-sortable-challenge/src/master/"
 
-Run command 'bundle exec cucumber'
+- Run command 'bundle exec cucumber'
+
     Obs: Chrome is set as default in cucumber.yaml . It can be changed to firefox or chrome-headless in the same file or simply execute the command 'bundle exec cucumber -p firefox'
 
 **Results**
@@ -56,4 +57,5 @@ Commands:
 
 - docker build -t sortablechallenge .
 - docker run -v {project_path}:/cucumber sortablechallenge cucumber features/sorting.feature
+
     Ex: docker run -v /Users/Victor/Documents/Victor/sortablechallenge:/cucumber sortablechallenge cucumber features/sorting.feature
